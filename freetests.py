@@ -161,6 +161,7 @@ class TestHTTPClient(unittest.TestCase):
         http = httpclass.HTTPClient()
         req = http.GET("http://%s:%d/49872398432" % (BASEHOST,BASEPORT) )
         self.assertTrue(req != None, "None Returned!")
+        print(req.code)
         self.assertTrue(req.code == 404)
 
     def test404POST(self):
